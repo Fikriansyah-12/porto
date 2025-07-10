@@ -1,6 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
+  ssr: false,
+  nitro: {
+    preset: 'vercel-edge'
+  },
 
   runtimeConfig: {
     enviroment: "PRODUCTION",
@@ -50,5 +54,4 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: "2024-11-01",
 })
